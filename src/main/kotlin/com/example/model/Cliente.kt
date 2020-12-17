@@ -13,7 +13,7 @@ open class Cliente(
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    open val id: String,
+    open val id: String? = null,
     @field:NotNull
     open val nome: String,
     @field:NotNull

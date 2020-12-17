@@ -26,6 +26,7 @@ micronaut {
 }
 
 dependencies {
+    kapt("io.micronaut.data:micronaut-data-processor")
     implementation("io.micronaut:micronaut-validation")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
@@ -33,7 +34,7 @@ dependencies {
     implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut.grpc:micronaut-grpc-runtime")
     implementation("javax.annotation:javax.annotation-api")
-    implementation("io.micronaut.sql:micronaut-jdbc-tomcat")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
     implementation("io.micronaut.beanvalidation:micronaut-hibernate-validator")
     implementation("io.micronaut.sql:micronaut-hibernate-jpa")
@@ -41,7 +42,7 @@ dependencies {
     //implementation("io.micronaut.kafka:micronaut-kafka-streams")
     runtimeOnly("org.slf4j:slf4j-simple")
     runtimeOnly("org.postgresql:postgresql")
-    runtimeOnly("ch.qos.logback:logback-classic")
+    //runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     testImplementation("io.micronaut:micronaut-http-client")
 }

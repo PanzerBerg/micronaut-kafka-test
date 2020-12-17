@@ -17,4 +17,4 @@ kafka:
     servers: localhost:9092
   producers:
     default:
-      retires: 3
+      retries: 3
